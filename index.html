@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ceji Clan - Main Page</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+</head>
+<body>
+  <h1 class="main-header">💚 YO! THIS IS THE MAIN PAGE</h1>
+
+  <div class="buttons">
+    <a href="https://discord.gg/your-server" class="btn discord">💜 Join Our Discord</a>
+    <a href="models.html" class="btn models">🟦 Roblox Models</a>
+    <a href="https://youtube.com/yourchannel" class="btn youtube">🔴 View Our Channel</a>
+    <a href="https://www.roblox.com/users/your-user/profile" class="btn roblox">⚪ Roblox Profile</a>
+  </div>
+
+  <form action="https://formspree.io/f/yourFormID" method="POST" class="feedback">
+    <input type="text" name="name" required placeholder="Your Name" />
+    <input type="email" name="email" required placeholder="Your Email" />
+    <textarea name="message" required placeholder="Your Message"></textarea>
+    <button type="submit">💬 Send Feedback</button>
+  </form>
+
+  <audio id="click-sound" src="assets/click.mp3"></audio>
+  <audio id="hover-sound" src="assets/hover.mp3"></audio>
+
+  <script>
+    document.querySelectorAll('.btn, button').forEach(el => {
+      el.addEventListener('click', () => {
+        document.getElementById('click-sound').play();
+      });
+      el.addEventListener('mouseover', () => {
+        document.getElementById('hover-sound').play();
+      });
+    });
+  </script>
+</body>
+</html>
